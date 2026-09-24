@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Perfiles y biografía de los personajes principales de Better Call Saul. Jimmy, Kim, Mike, Gus, Lalo y más. Programación 4 UTN Haedo.">
+  <title>Personajes | Better Call Saul</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" href="imagenes/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor encabezado__contenedor">
+      <a href="index.html" class="logo-sitio" aria-label="Ir a la portada de Better Call Saul">
+        <img src="imagenes/logo.svg" alt="Better Call Saul - Attorney at Law">
+      </a>
+
+      <button class="hamburguesa" id="btnHamburguesa" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-lista">
+          <li class="nav-item">
+            <a href="index.html" class="nav-enlace">Inicio</a>
+          </li>
+
+          <li class="nav-item nav-item--desplegable">
+            <a href="temporadas.html" class="nav-enlace">
+              Temporadas <i class="fa-solid fa-chevron-down nav-flecha"></i>
+            </a>
+            <ul class="submenu" aria-label="Desglose de temporadas">
+              <li class="submenu-item">
+                <a href="temporadas.html#temp1-2" class="submenu-enlace">
+                  <i class="fa-solid fa-scale-balanced"></i> Temp. 1 & 2: Inicios de Jimmy
+                </a>
+              </li>
+              <li class="submenu-item">
+                <a href="temporadas.html#temp3-4" class="submenu-enlace">
+                  <i class="fa-solid fa-bolt"></i> Temp. 3 & 4: Conflicto con Chuck
+                </a>
+              </li>
+              <li class="submenu-item">
+                <a href="temporadas.html#temp5-6" class="submenu-enlace">
+                  <i class="fa-solid fa-briefcase"></i> Temp. 5 & 6: Nace Saul Goodman
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="personajes.html" class="nav-enlace activo">Personajes</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="galeria.html" class="nav-enlace">Galería</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contacto.html" class="nav-enlace">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="seccion-titulo">
+          <h2>Galería de Personajes</h2>
+          <p class="linea-unica">Los protagonistas y antagonistas que dieron vida a una de las historias más profundas y complejas de la televisión.</p>
+        </div>
+
+        <div class="grilla-personajes">
+
+          <article class="card-personaje">
+            <div class="card-personaje__img-wrapper">
+              <img src="imagenes/saul.png" alt="Bob Odenkirk caracterizado como Jimmy McGill en Better Call Saul">
+              <span class="card-personaje__etiqueta">Protagonista</span>
+            </div>
+            <div class="card-personaje__cuerpo">
+              <h3 class="card-personaje__nombre">James "Jimmy" McGill</h3>
+              <span class="card-personaje__alias">Alias: Saul Goodman / Gene Takavic</span>
+              <p class="card-personaje__descripcion">
+                Ex estafador de Chicago ("Slippin' Jimmy") que obtuvo su título de abogado por correspondencia. Su ingenio implacable y su afán por conseguir aprobación lo llevan a crear a Saul Goodman, el abogado predilecto de la delincuencia.
+              </p>
+              <div class="card-personaje__cita">
+                "¡Sé lo que fui, lo que soy y lo que seré! ¿Tienes un problema? ¡Mejor llama a Saul!"
+              </div>
+            </div>
+          </article>
+
+          <article class="card-personaje">
+            <div class="card-personaje__img-wrapper">
+              <img src="imagenes/kim.png" alt="Rhea Seehorn caracterizada como Kim Wexler">
+              <span class="card-personaje__etiqueta">Litigante</span>
+            </div>
+            <div class="card-personaje__cuerpo">
+              <h3 class="card-personaje__nombre">Kimberly "Kim" Wexler</h3>
+              <span class="card-personaje__alias">Brillante Abogada & Pareja de Jimmy</span>
+              <p class="card-personaje__descripcion">
+                Abogada de ética rigurosa en HHM y defensora apasionada de casos pro bono. Sin embargo, su lealtad incondicional a Jimmy despierta en ella una atracción irresistible por los fraudes y la manipulación procesal.
+              </p>
+              <div class="card-personaje__cita">
+                "No puedes salvarme a mí, Jimmy. Yo me salvo sola."
+              </div>
+            </div>
+          </article>
+
+          <article class="card-personaje">
+            <div class="card-personaje__img-wrapper">
+              <img src="imagenes/mike.png" alt="Jonathan Banks caracterizado como Mike Ehrmantraut">
+              <span class="card-personaje__etiqueta">Operativo</span>
+            </div>
+            <div class="card-personaje__cuerpo">
+              <h3 class="card-personaje__nombre">Mike Ehrmantraut</h3>
+              <span class="card-personaje__alias">Ex policía de Filadelfia & Sicario</span>
+              <p class="card-personaje__descripcion">
+                Hombre de pocas palabras y profesionalismo implacable. Motivado por asegurar el futuro económico de su nieta Kaylee, Mike se convierte en el brazo derecho y estratega de seguridad de Gustavo Fring.
+              </p>
+              <div class="card-personaje__cita">
+                "Elegiste un camino. Y ahora ese camino te define. No hay vuelta atrás."
+              </div>
+            </div>
+          </article>
+
+          <article class="card-personaje">
+            <div class="card-personaje__img-wrapper">
+              <img src="imagenes/gus.png" alt="Giancarlo Esposito como Gustavo Fring en Los Pollos Hermanos">
+              <span class="card-personaje__etiqueta">Líder Criminal</span>
+            </div>
+            <div class="card-personaje__cuerpo">
+              <h3 class="card-personaje__nombre">Gustavo "Gus" Fring</h3>
+              <span class="card-personaje__alias">Propietario de Los Pollos Hermanos</span>
+              <p class="card-personaje__descripcion">
+                Filántropo y respetado hombre de negocios de día; implacable y calculador capo de la distribución de metanfetamina de noche. Planea pacientemente su venganza contra el clan Salamanca.
+              </p>
+              <div class="card-personaje__cita">
+                "Un hombre provee para su familia. Lo hace incluso cuando no es apreciado o respetado."
+              </div>
+            </div>
+          </article>
+
+          <article class="card-personaje">
+            <div class="card-personaje__img-wrapper">
+              <img src="imagenes/chuck.jpg" alt="Michael McKean como Chuck McGill con su manta térmica">
+              <span class="card-personaje__etiqueta">Socio Fundador</span>
+            </div>
+            <div class="card-personaje__cuerpo">
+              <h3 class="card-personaje__nombre">Charles "Chuck" McGill</h3>
+              <span class="card-personaje__alias">Cofundador de HHM & Hermano Mayor</span>
+              <p class="card-personaje__descripcion">
+                Jurista con una mente prodigiosa pero consumido por el resentimiento hacia el carisma de Jimmy y afectado por una severa hipersensibilidad psicosomática a la electricidad.
+              </p>
+              <div class="card-personaje__cita">
+                "¡Jimmy con un título de abogado es como un chimpancé con una ametralladora!"
+              </div>
+            </div>
+          </article>
+
+          <article class="card-personaje">
+            <div class="card-personaje__img-wrapper">
+              <img src="imagenes/lalo.png" alt="Tony Dalton caracterizado como Lalo Salamanca">
+              <span class="card-personaje__etiqueta">Cartel de Juárez</span>
+            </div>
+            <div class="card-personaje__cuerpo">
+              <h3 class="card-personaje__nombre">Eduardo "Lalo" Salamanca</h3>
+              <span class="card-personaje__alias">Lugarteniente de la Familia Salamanca</span>
+              <p class="card-personaje__descripcion">
+                Extremadamente encantador, simpático y letal. Llega a Albuquerque para proteger los intereses de su tío Don Héctor y desmantelar el silencioso plan de expansión de Gus Fring.
+              </p>
+              <div class="card-personaje__cita">
+                "¿Jimmy McGill? Muéstrame el dinero y haz tu trabajo de abogado, amigo."
+              </div>
+            </div>
+          </article>
+
+          <article class="card-personaje">
+            <div class="card-personaje__img-wrapper">
+              <img src="imagenes/nacho.png" alt="Michael Mando como Nacho Varga">
+              <span class="card-personaje__etiqueta">Infiltrado</span>
+            </div>
+            <div class="card-personaje__cuerpo">
+              <h3 class="card-personaje__nombre">Ignacio "Nacho" Varga</h3>
+              <span class="card-personaje__alias">Mano Derecha de los Salamanca</span>
+              <p class="card-personaje__descripcion">
+                Inteligente y prudente, busca proteger a su padre de la vorágine violenta del narcotráfico. Termina atrapado en una trampa mortal entre la crueldad de los Salamanca y la frialdad de Gus Fring.
+              </p>
+              <div class="card-personaje__cita">
+                "Yo cambié las pastillas de Héctor. Y tú no pudiste hacer nada para detenerlo."
+              </div>
+            </div>
+          </article>
+
+          <article class="card-personaje">
+            <div class="card-personaje__img-wrapper">
+              <img src="imagenes/howard.png" alt="Patrick Fabian caracterizado como Howard Hamlin">
+              <span class="card-personaje__etiqueta">Socio Director HHM</span>
+            </div>
+            <div class="card-personaje__cuerpo">
+              <h3 class="card-personaje__nombre">Howard Hamlin</h3>
+              <span class="card-personaje__alias">Rostro Corporativo de HHM</span>
+              <p class="card-personaje__descripcion">
+                Impecable, profesional y con trajes a medida azul 'Hamindigo'. A pesar de haber cargado injustamente con la culpa de las decisiones de Chuck, se convierte en el blanco de las crueles trampas de Jimmy y Kim.
+              </p>
+              <div class="card-personaje__cita">
+                "No hay necesidad de inventar mentiras, Jimmy. Te conozco perfectamente."
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <div class="pie-grilla">
+        <div class="pie-col">
+          <h4>Bufete Saul Goodman</h4>
+          <p>
+            James M. McGill, Esq. Especialista en litigios complejos y defensa de derechos individuales en Albuquerque, NM.
+          </p>
+          <div class="redes-sociales">
+            <a href="#" class="red-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="red-link" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="red-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="red-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="pie-col">
+          <h4>Navegación Rápida</h4>
+          <ul class="pie-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="temporadas.html">Temporadas 1 a 6</a></li>
+            <li><a href="personajes.html">Galería de Personajes</a></li>
+            <li><a href="galeria.html">Galería de Escenas</a></li>
+            <li><a href="contacto.html">Consulta Jurídica</a></li>
+          </ul>
+        </div>
+
+        <div class="pie-col">
+          <h4>Oficina Central</h4>
+          <p><i class="fa-solid fa-location-dot" style="color: var(--amarillo-saul); margin-right: 0.5rem;"></i> 9800 Montgomery Blvd NE, Albuquerque, NM</p>
+          <p><i class="fa-solid fa-phone" style="color: var(--amarillo-saul); margin-right: 0.5rem;"></i> (505) 503-4455</p>
+          <p><i class="fa-solid fa-envelope" style="color: var(--amarillo-saul); margin-right: 0.5rem;"></i> saul@bettercallsaul.law</p>
+        </div>
+      </div>
+
+      <div class="pie-inferior">
+        <p>
+          &copy; 2026 <span>Better Call Saul Fan Experience</span>. Desarrollado para <strong>Programación 4 - UTN Facultad Regional Haedo</strong>.
+        </p>
+        <p style="margin-top: 0.4rem; font-size: 0.78rem; opacity: 0.7;">
+          Aviso legal: Tributo académico y recreativo. Personajes propiedad de Sony Pictures Television y AMC Networks.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/base.js"></script>
+</body>
+</html>

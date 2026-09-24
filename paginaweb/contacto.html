@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulario de contacto y comunidad con el equipo de Better Call Saul. Programación 4 UTN Haedo.">
+  <title>Contacto & Comunidad | Better Call Saul</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" href="imagenes/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor encabezado__contenedor">
+      <a href="index.html" class="logo-sitio" aria-label="Ir a la portada de Better Call Saul">
+        <img src="imagenes/logo.svg" alt="Better Call Saul - Attorney at Law">
+      </a>
+
+      <button class="hamburguesa" id="btnHamburguesa" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-lista">
+          <li class="nav-item">
+            <a href="index.html" class="nav-enlace">Inicio</a>
+          </li>
+
+          <li class="nav-item nav-item--desplegable">
+            <a href="temporadas.html" class="nav-enlace">
+              Temporadas <i class="fa-solid fa-chevron-down nav-flecha"></i>
+            </a>
+            <ul class="submenu" aria-label="Desglose de temporadas">
+              <li class="submenu-item">
+                <a href="temporadas.html#temp1-2" class="submenu-enlace">
+                  <i class="fa-solid fa-scale-balanced"></i> Temp. 1 & 2: Inicios de Jimmy
+                </a>
+              </li>
+              <li class="submenu-item">
+                <a href="temporadas.html#temp3-4" class="submenu-enlace">
+                  <i class="fa-solid fa-bolt"></i> Temp. 3 & 4: Conflicto con Chuck
+                </a>
+              </li>
+              <li class="submenu-item">
+                <a href="temporadas.html#temp5-6" class="submenu-enlace">
+                  <i class="fa-solid fa-briefcase"></i> Temp. 5 & 6: Nace Saul Goodman
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="personajes.html" class="nav-enlace">Personajes</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="galeria.html" class="nav-enlace">Galería</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contacto.html" class="nav-enlace activo">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="seccion-titulo">
+          <h2>Contacto & Comunidad</h2>
+          <p class="linea-unica">Completa el formulario confidencial y Saul Goodman tomará tu caso de inmediato.</p>
+        </div>
+
+        <div class="contacto-wrapper">
+
+          <aside class="contacto-info">
+            <h3>¡Hablemos de la Serie!</h3>
+            <p style="font-size: 1.05rem; line-height: 1.6; color: var(--texto-principal); margin-bottom: 1.8rem;">
+              Si encontraste un dato mal, querés sumar imágenes o simplemente venís a discutir cuál es la mejor temporada, escribinos. Se responde rápido, ¡más rápido que una llamada de fianza a Saul Goodman!
+            </p>
+
+            <div class="info-item">
+              <div class="info-item__icono">
+                <i class="fa-solid fa-comments"></i>
+              </div>
+              <div>
+                <h4>Debates & Teorías</h4>
+                <span>Discutí el destino de Kim Wexler, los planes de Gus Fring o por qué 'Chicanery' es cine puro.</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-item__icono">
+                <i class="fa-solid fa-images"></i>
+              </div>
+              <div>
+                <h4>Aporte de Imágenes</h4>
+                <span>¿Tenés fotos del rodaje en Albuquerque, fondos o pósters para la galería? ¡Sumalos!</span>
+              </div>
+            </div>
+          </aside>
+
+          <section class="contacto-form-caja">
+            <form id="formularioContacto" class="formulario" novalidate>
+
+              <div class="form-fila">
+                <div class="form-grupo">
+                  <label for="nombre"><i class="fa-solid fa-user"></i> Tu Nombre o Alias *</label>
+                  <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ej. Slippin' Jimmy" required>
+                </div>
+
+                <div class="form-grupo">
+                  <label for="email"><i class="fa-solid fa-envelope"></i> Correo Electrónico *</label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="tu-correo@ejemplo.com" required>
+                </div>
+              </div>
+
+              <div class="form-fila">
+                <div class="form-grupo">
+                  <label for="telefono"><i class="fa-solid fa-phone"></i> Teléfono Móvil (Opcional)</label>
+                  <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="Ej. (505) 555-0143">
+                </div>
+              </div>
+
+              <div class="form-grupo">
+                <label for="mensaje"><i class="fa-solid fa-comment-dots"></i> Tu Mensaje *</label>
+                <textarea id="mensaje" name="mensaje" class="form-control" placeholder="Escribinos tus comentarios, sugerencias o tu debate sobre Better Call Saul..." required></textarea>
+              </div>
+
+              <div class="form-grupo">
+                <label class="check-etiqueta">
+                  <input type="checkbox" id="terminos" name="terminos" required>
+                  Acepto intercambiar opiniones con respeto sobre el universo de Vince Gilligan y Peter Gould.
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.1rem; font-size: 1.2rem;">
+                <i class="fa-solid fa-paper-plane"></i> ¡Enviar Mensaje al Equipo!
+              </button>
+            </form>
+          </section>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="modal-feedback" id="modalFeedback" role="dialog" aria-modal="true" aria-label="Confirmación de mensaje">
+      <div class="modal-feedback__caja">
+        <div class="modal-feedback__icono">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <h3>¡Mensaje Recibido!</h3>
+        <p>
+          Gracias, <strong id="feedbackNombre">Fan</strong>. Hemos recibido tu mensaje en la oficina. Te responderemos más rápido de lo que Saul Goodman consigue una orden de excarcelación en Albuquerque.
+        </p>
+        <button type="button" class="btn btn-primary" id="btnCerrarModalFeedback">
+          ¡Genial, gracias!
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <div class="pie-grilla">
+        <div class="pie-col">
+          <h4>Bufete Saul Goodman</h4>
+          <p>
+            James M. McGill, Esq. Especialista en litigios complejos y defensa de derechos individuales en Albuquerque, NM.
+          </p>
+          <div class="redes-sociales">
+            <a href="#" class="red-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="red-link" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="red-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="red-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="pie-col">
+          <h4>Navegación Rápida</h4>
+          <ul class="pie-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="temporadas.html">Temporadas 1 a 6</a></li>
+            <li><a href="personajes.html">Galería de Personajes</a></li>
+            <li><a href="galeria.html">Galería de Escenas</a></li>
+            <li><a href="contacto.html">Consulta Jurídica</a></li>
+          </ul>
+        </div>
+
+        <div class="pie-col">
+          <h4>Oficina Central</h4>
+          <p><i class="fa-solid fa-location-dot" style="color: var(--amarillo-saul); margin-right: 0.5rem;"></i> 9800 Montgomery Blvd NE, Albuquerque, NM</p>
+          <p><i class="fa-solid fa-phone" style="color: var(--amarillo-saul); margin-right: 0.5rem;"></i> (505) 503-4455</p>
+          <p><i class="fa-solid fa-envelope" style="color: var(--amarillo-saul); margin-right: 0.5rem;"></i> saul@bettercallsaul.law</p>
+        </div>
+      </div>
+
+      <div class="pie-inferior">
+        <p>
+          &copy; 2026 <span>Better Call Saul Fan Experience</span>. Desarrollado para <strong>Programación 4 - UTN Facultad Regional Haedo</strong>.
+        </p>
+        <p style="margin-top: 0.4rem; font-size: 0.78rem; opacity: 0.7;">
+          Aviso legal: Tributo académico y recreativo. Personajes propiedad de Sony Pictures Television y AMC Networks.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/base.js"></script>
+</body>
+</html>

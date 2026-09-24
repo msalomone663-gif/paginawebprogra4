@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galería interactiva y funcional de Better Call Saul. Filtros por categoría y visor Lightbox a pantalla completa. Programación 4 UTN Haedo.">
+  <title>Galería Funcional | Better Call Saul</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" href="imagenes/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor encabezado__contenedor">
+      <a href="index.html" class="logo-sitio" aria-label="Ir a la portada de Better Call Saul">
+        <img src="imagenes/logo.svg" alt="Better Call Saul - Attorney at Law">
+      </a>
+
+      <button class="hamburguesa" id="btnHamburguesa" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-lista">
+          <li class="nav-item">
+            <a href="index.html" class="nav-enlace">Inicio</a>
+          </li>
+
+          <li class="nav-item nav-item--desplegable">
+            <a href="temporadas.html" class="nav-enlace">
+              Temporadas <i class="fa-solid fa-chevron-down nav-flecha"></i>
+            </a>
+            <ul class="submenu" aria-label="Desglose de temporadas">
+              <li class="submenu-item">
+                <a href="temporadas.html#temp1-2" class="submenu-enlace">
+                  <i class="fa-solid fa-scale-balanced"></i> Temp. 1 & 2: Inicios de Jimmy
+                </a>
+              </li>
+              <li class="submenu-item">
+                <a href="temporadas.html#temp3-4" class="submenu-enlace">
+                  <i class="fa-solid fa-bolt"></i> Temp. 3 & 4: Conflicto con Chuck
+                </a>
+              </li>
+              <li class="submenu-item">
+                <a href="temporadas.html#temp5-6" class="submenu-enlace">
+                  <i class="fa-solid fa-briefcase"></i> Temp. 5 & 6: Nace Saul Goodman
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="personajes.html" class="nav-enlace">Personajes</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="galeria.html" class="nav-enlace activo">Galería</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contacto.html" class="nav-enlace">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="seccion-titulo">
+          <h2>Galería de Escenas & Archivos</h2>
+          <p class="linea-unica">Explora los momentos cumbre, personajes y locaciones icónicas de Albuquerque.</p>
+        </div>
+
+        <div class="galeria-filtros" role="toolbar" aria-label="Filtros de la galería">
+          <button class="filtro-btn activo" data-categoria="todos">
+            <i class="fa-solid fa-border-all"></i> Todas las Imágenes
+          </button>
+          <button class="filtro-btn" data-categoria="abogados">
+            <i class="fa-solid fa-scale-balanced"></i> Bufete & Leyes
+          </button>
+          <button class="filtro-btn" data-categoria="personajes">
+            <i class="fa-solid fa-user-group"></i> Personajes
+          </button>
+          <button class="filtro-btn" data-categoria="crimen">
+            <i class="fa-solid fa-skull"></i> Inframundo & Desierto
+          </button>
+        </div>
+
+        <div class="galeria-grilla">
+
+          <div class="galeria-item galeria-item--pos-arriba" data-categoria="personajes">
+            <img src="imagenes/saul.png" alt="Bob Odenkirk caracterizado como Jimmy McGill">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>Jimmy McGill (Saul Goodman)</h4>
+              <p>Retrato oficial de Bob Odenkirk con sus característicos trajes en Albuquerque.</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-arriba" data-categoria="personajes">
+            <img src="imagenes/kim.png" alt="Rhea Seehorn en su papel de Kim Wexler">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>Kimberly Wexler</h4>
+              <p>Retrato oficial de Rhea Seehorn como la apasionada y brillante abogada.</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-arriba" data-categoria="personajes">
+            <img src="imagenes/mike.png" alt="Jonathan Banks en el papel de Mike Ehrmantraut">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>Mike Ehrmantraut</h4>
+              <p>El veterano operador y estratega indispensable del universo Albuquerque.</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-arriba" data-categoria="crimen">
+            <img src="imagenes/gus.png" alt="Giancarlo Esposito caracterizado como Gustavo Fring">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>Gustavo Fring</h4>
+              <p>El rostro apacible y calculador detrás del emporio Los Pollos Hermanos.</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-arriba" data-categoria="crimen">
+            <img src="imagenes/lalo.png" alt="Tony Dalton como Lalo Salamanca">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>Eduardo "Lalo" Salamanca</h4>
+              <p>Carisma irresistible y frialdad letal al servicio del clan Salamanca.</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-arriba" data-categoria="abogados">
+            <img src="imagenes/howard.png" alt="Patrick Fabian caracterizado como Howard Hamlin">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>Howard Hamlin</h4>
+              <p>El socio de HHM luciendo su característico y elegante traje 'Hamindigo'.</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-arriba" data-categoria="crimen">
+            <img src="imagenes/nacho.png" alt="Michael Mando caracterizado como Nacho Varga">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>Ignacio "Nacho" Varga</h4>
+              <p>Atrapado en una red criminal mientras intenta salvaguardar a su familia.</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-arriba" data-categoria="abogados">
+            <img src="imagenes/chuck.jpg" alt="Michael McKean como Chuck McGill con su manta térmica">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>Charles "Chuck" McGill</h4>
+              <p>El virtuoso socio fundador de HHM protegido de las ondas electromagnéticas.</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-centro" data-categoria="abogados">
+            <img src="imagenes/escena-chicanery.webp" alt="Juicio Chicanery - Declaración de Chuck McGill">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>Audiencia: "Chicanery"</h4>
+              <p>El colapso de Chuck en el tribunal: "¡Sé que cambió esos números! ¡1216!".</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-centro" data-categoria="crimen">
+            <img src="imagenes/escena-bagman.jpg" alt="Jimmy McGill cruzando el desierto con las bolsas de dinero">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>Odisea: "Bagman"</h4>
+              <p>Jimmy arrastrando $7 millones en efectivo bajo el sol abrasador de Nuevo México.</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-centro" data-categoria="crimen">
+            <img src="imagenes/escena-pointshoot.jpg" alt="Lalo Salamanca irrumpiendo en el departamento">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>Clímax: "Point and Shoot"</h4>
+              <p>El momento más impactante y oscuro en el departamento de Kim y Jimmy.</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-centro" data-categoria="crimen">
+            <img src="imagenes/escena-bad-choice.jpg" alt="Interrogatorio de Lalo en el apartamento">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>Tensión: "Bad Choice Road"</h4>
+              <p>Lalo obligando a Jimmy a repetir la historia del desierto: "Cuéntamela otra vez".</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-centro" data-categoria="abogados">
+            <img src="imagenes/escena-plan-execution.jpg" alt="Episodio Plan and Execution">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>"Plan and Execution"</h4>
+              <p>El plan maestro contra Howard Hamlin y el fatal desenlace que selló la serie.</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-centro" data-categoria="crimen">
+            <img src="imagenes/escena-nacho-stand.jpg" alt="Nacho Varga en el desierto frente a los Salamanca">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>Despedida: "Rock and Hard Place"</h4>
+              <p>La valiente confesión de Nacho Varga antes de su último aliento en el desierto.</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-centro" data-categoria="abogados">
+            <img src="imagenes/escena-saul-gone.png" alt="Juicio final en Omaha - Saul Gone">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>Veredicto: "Saul Gone"</h4>
+              <p>El cierre magistral en blanco y negro: Jimmy asume su responsabilidad civil y penal.</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-centro" data-categoria="personajes">
+            <img src="imagenes/escena-nippy.jpg" alt="Gene Takavic en el centro comercial de Omaha">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>Omaha: "Nippy"</h4>
+              <p>Gene Takavic y el ingenioso golpe en las tiendas departamentales de Nebraska.</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-centro" data-categoria="personajes">
+            <img src="imagenes/escena-waterworks.jpg" alt="Kim Wexler en Waterworks">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>Exilio: "Waterworks"</h4>
+              <p>La nueva vida de Kim Wexler en Florida lidiando con los fantasmas del pasado.</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-centro" data-categoria="abogados">
+            <img src="imagenes/escena-jmm.jpg" alt="Póster oficial JMM Justice Matters Most">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>"J.M.M." (Just Make Money)</h4>
+              <p>El lema corporativo que simbolizó la decadencia ética y el matrimonio con Kim.</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-centro" data-categoria="abogados">
+            <img src="imagenes/poster-temp1.jpg" alt="Póster oficial de la Temporada 1 de Better Call Saul">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>Póster Oficial: Temporada 1</h4>
+              <p>Jimmy esperando llamadas desesperadas en la cabina telefónica del desierto.</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-centro" data-categoria="abogados">
+            <img src="imagenes/poster-temp3.jpg" alt="Póster oficial de la Temporada 3 de Better Call Saul">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>Póster Oficial: Temporada 3</h4>
+              <p>La ficha policial de arresto que desencadena el quiebre irremediable entre hermanos.</p>
+            </div>
+          </div>
+
+          <div class="galeria-item galeria-item--pos-centro" data-categoria="personajes">
+            <img src="imagenes/poster-temp6.jpg" alt="Póster oficial de la Temporada 6 de Better Call Saul">
+            <div class="galeria-overlay">
+              <span class="zoom-icono"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <h4>Póster Oficial: Temporada 6</h4>
+              <p>La dicotomía visual entre la colorida corbata de Saul y el abrigo gris de Gene.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor ampliado de imagen">
+      <div class="lightbox__contenido">
+        <button class="lightbox__btn-cerrar" id="btnCerrarLightbox" aria-label="Cerrar visor">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <button class="lightbox__nav lightbox__nav--prev" id="btnPrevLightbox" aria-label="Imagen anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="lightbox__nav lightbox__nav--next" id="btnNextLightbox" aria-label="Siguiente imagen">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <img src="" alt="" class="lightbox__img" id="lightboxImg">
+
+        <div class="lightbox__pie">
+          <h3 class="lightbox__titulo" id="lightboxTitulo">Título de la imagen</h3>
+          <p class="lightbox__desc" id="lightboxDesc">Descripción de la escena</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <div class="pie-grilla">
+        <div class="pie-col">
+          <h4>Bufete Saul Goodman</h4>
+          <p>
+            James M. McGill, Esq. Especialista en litigios complejos y defensa de derechos individuales en Albuquerque, NM.
+          </p>
+          <div class="redes-sociales">
+            <a href="#" class="red-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="red-link" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="red-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="red-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="pie-col">
+          <h4>Navegación Rápida</h4>
+          <ul class="pie-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="temporadas.html">Temporadas 1 a 6</a></li>
+            <li><a href="personajes.html">Galería de Personajes</a></li>
+            <li><a href="galeria.html">Galería de Escenas</a></li>
+            <li><a href="contacto.html">Consulta Jurídica</a></li>
+          </ul>
+        </div>
+
+        <div class="pie-col">
+          <h4>Oficina Central</h4>
+          <p><i class="fa-solid fa-location-dot" style="color: var(--amarillo-saul); margin-right: 0.5rem;"></i> 9800 Montgomery Blvd NE, Albuquerque, NM</p>
+          <p><i class="fa-solid fa-phone" style="color: var(--amarillo-saul); margin-right: 0.5rem;"></i> (505) 503-4455</p>
+          <p><i class="fa-solid fa-envelope" style="color: var(--amarillo-saul); margin-right: 0.5rem;"></i> saul@bettercallsaul.law</p>
+        </div>
+      </div>
+
+      <div class="pie-inferior">
+        <p>
+          &copy; 2026 <span>Better Call Saul Fan Experience</span>. Desarrollado para <strong>Programación 4 - UTN Facultad Regional Haedo</strong>.
+        </p>
+        <p style="margin-top: 0.4rem; font-size: 0.78rem; opacity: 0.7;">
+          Aviso legal: Tributo académico y recreativo. Personajes propiedad de Sony Pictures Television y AMC Networks.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/base.js"></script>
+</body>
+</html>
